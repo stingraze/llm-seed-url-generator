@@ -3,6 +3,7 @@
 #(C)Tsubasa Kato 2023/8/16 10:10AM JST
 #You can start a Celery worker by running the following command in the same directory as your script:
 #celery -A <your_module_name> worker --loglevel=info
+#Replace <your_module_name> with the name of the Python file (without the .py extension) where the above code is located.
 from flask import Flask, jsonify, request
 from celery import Celery
 import requests
