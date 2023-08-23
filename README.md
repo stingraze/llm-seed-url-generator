@@ -6,4 +6,6 @@ Still needs work for actual implementation. (Concept stage, implemented version 
 Update: 8/14/2023: Made an implemented version of API working with Llama 2. 
 (llm-seed-url-generator-working.py)
 
+Update: 8/23/2023: test-llama-13b.py wasn't working anymore so I made a fixed version and uploaded it here.
+
 (C)Tsubasa Kato 2023 Made with ChatGPT (GPT-4)
