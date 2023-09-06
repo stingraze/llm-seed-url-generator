@@ -1,7 +1,9 @@
+#Updated on 9/6/2023 10:45AM
+#(C)Tsubasa Kato at Inspire Search Corporation. Created with the help of ChatGPT (GPT-4)
 from transformers import AutoTokenizer, pipeline, logging
 from auto_gptq import AutoGPTQForCausalLM, BaseQuantizeConfig
 import sys
-model_name_or_path = "TheBloke/Llama-2-13B-chat-GPTQ"
+model_name_or_path = "TheBloke/Llama-2-13b-Chat-GPTQ"
 model_basename = "model"
 
 use_triton = True
@@ -31,29 +33,27 @@ model = AutoGPTQForCausalLM.from_quantized(model_name_or_path,
 #prompt = "Tell me about AI"
 prompt = sys.argv[1]
 #system_message = "You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe.  Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature. If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information."
-prompt_template=f'''
-{prompt}'''
+prompt_template=f'''{prompt}'''
 
-print("\n\n*** Generate:")
+#print("\n\n*** Generate:")
 
-input_ids = tokenizer(prompt_template, return_tensors='pt').input_ids.cuda()
-output = model.generate(inputs=input_ids, temperature=0.7, max_new_tokens=512)
-print(tokenizer.decode(output[0]))
+#input_ids = tokenizer(prompt_template, return_tensors='pt').input_ids.cuda()
+#output = model.generate(inputs=input_ids, temperature=0.9, max_new_tokens=512)#print(tokenizer.decode(output[0]))
 
 # Inference can also be done using transformers' pipeline
 
 # Prevent printing spurious transformers error when using pipeline with AutoGPTQ
-#logging.set_verbosity(logging.CRITICAL)
+logging.set_verbosity(logging.CRITICAL)
 
-#print("*** Pipeline:")
-#pipe = pipeline(
-#    "text-generation",
-#    model=model,
-#    tokenizer=tokenizer,
-#    max_new_tokens=512,
-#    temperature=0.7,
-#    top_p=0.95,
-#    repetition_penalty=1.15
-#)
+print("*** Pipeline:")
+pipe = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    max_new_tokens=256,
+    temperature=0.9,
+    top_p=0.95,
+    repetition_penalty=1.15
+)
 
-#print(pipe(prompt_template)[0]['generated_text'])
+print(pipe(prompt_template)[0]['generated_text'])
