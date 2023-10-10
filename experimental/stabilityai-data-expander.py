@@ -1,6 +1,7 @@
 #(C)Tsubasa Kato - Inspire Search Corporation 10/10/2023 14:35PM 
 #This allows to create open ended conversations etc. with Stability AI's LLM .
 #Great for creating new data out of a small subset of data.
+#Please visit my company's website at: https://www.inspiresearch.io/en
 import sys
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import time
