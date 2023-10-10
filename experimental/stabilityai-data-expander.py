@@ -16,7 +16,7 @@ model = AutoModelForCausalLM.from_pretrained(
 model.cuda()
 def get_data():
   lines = open('file.txt').read().splitlines()
-  myline =random.choice(lines)
+  myline = random.choice(lines)
   return myline
 
 n = 10
