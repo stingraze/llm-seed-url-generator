@@ -15,4 +15,6 @@ It now needs to make URL that will send the sentences extracted to a search engi
 
 Update: 9/6/2023: Modified llm-seed-url-generator2.py (not under experimental) so it works well and provides search URLs to extract the related URLs from a search engine endpoint (this is search.php in this case, not in this repository)
 
-(C)Tsubasa Kato 2023 Made with ChatGPT (GPT-4)
+Update: 10/10/2023: Uploaded stabilityai-data-expander.py . This asks the LLM (Stability AI's Stable LM 3B) to expand data.
+
+(C)Tsubasa Kato 2023 Made with the help of ChatGPT (GPT-4)
