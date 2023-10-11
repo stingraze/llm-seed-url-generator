@@ -17,4 +17,6 @@ Update: 9/6/2023: Modified llm-seed-url-generator2.py (not under experimental) s
 
 Update: 10/10/2023: Uploaded stabilityai-data-expander.py under experimental folder. This asks the LLM (Stability AI's Stable LM 3B) to expand data.
 
+Updated: 10/11/2023 Uploaded dolly2-data-expander.py under experimental folder. This is asks the LLM (Databrick's Dolly 2 3b) to expand data. The code is mostly the same as stabilityai-data-expander.py .
+
 (C)Tsubasa Kato 2023 Made with the help of ChatGPT (GPT-4)
