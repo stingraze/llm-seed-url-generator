@@ -1,7 +1,8 @@
 # llm-seed-url-generator
 Experimental Repository of Seed URL generator using LLM for use with a web crawler
 
-Tested on a Ubuntu 20.04 environment with 12 thread 10th Generation Core i5 with 64GB of RAM and GeForce RTX 3090.
+Tested on a Ubuntu 20.04 environment with 12 thread 10th Generation Core i5 with 64GB of RAM and NVIDIA GeForce RTX 3090. 
+dolly2-data-expander.py ran on 16GB of RAM and NVIDIA T4 GPU, but did not run till the end. Better spec is recommended.
 
 Still needs work for actual implementation. (Concept stage, implemented version coming soon)
 
