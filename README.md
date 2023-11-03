@@ -20,4 +20,6 @@ Update: 10/10/2023: Uploaded stabilityai-data-expander.py under experimental fol
 
 Updated: 10/11/2023 Uploaded dolly2-data-expander.py under experimental folder. This is asks the LLM (Databrick's Dolly 2 3b) to expand data. The code is mostly the same as stabilityai-data-expander.py .
 
+Updated: 11/3/2023 Uploaded stabilityai-data-expander-multi-thread.py under experimental folder. This is the multithread version of stabilityai-data-expander.py. Much faster than single thread version upon test.
+
 (C)Tsubasa Kato 2023 Made with the help of ChatGPT (GPT-4)
